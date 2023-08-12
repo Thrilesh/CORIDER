@@ -10,7 +10,7 @@ COPY . /app/
 # Install any dependencies from requirements.txt
 RUN pip install -r requirements.txt
 
-# Expose port 5000 (if your application uses a specific port)
+# Expose port 5000 
 EXPOSE 5000
 
 # Run the Python script
