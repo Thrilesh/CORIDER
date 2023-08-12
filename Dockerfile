@@ -4,13 +4,13 @@ FROM python:3.8
 # Set the working directory inside the container
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
-COPY app.py /app
+# Copy the application files into the container at /app
+COPY . /app/
 
-# Install any dependencies (if you have a requirements.txt file)
+# Install any dependencies from requirements.txt
 RUN pip install -r requirements.txt
 
-# Expose a port (if your application uses a specific port)
+# Expose port 5000 (if your application uses a specific port)
 EXPOSE 5000
 
 # Run the Python script
